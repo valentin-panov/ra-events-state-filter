@@ -1,0 +1,16 @@
+.projectListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.projectList {
+  margin-top: 0px;
+  padding: 0px;
+  flex: 0 1 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
