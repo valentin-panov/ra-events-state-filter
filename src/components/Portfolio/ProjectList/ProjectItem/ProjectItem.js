@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ProjectItem.css';
 
 function ProjectItem(props) {
@@ -16,7 +15,5 @@ function ProjectItem(props) {
     </li>
   );
 }
-
-ProjectItem.propTypes = {};
 
 export default ProjectItem;

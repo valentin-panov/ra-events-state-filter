@@ -1,5 +1,4 @@
-import React, { Component, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import json from '../../data/projects.json';
 import Toolbar from './Toolbar/Toolbar';
 import Projectlist from './ProjectList/Projectlist';
@@ -13,11 +12,8 @@ export default class Portfolio extends Component {
       activeFilter: this.filters[0],
       filteredProjects: json,
     };
+    this.selectFilter = this.selectFilter.bind(this);
   }
-
-  // static propTypes = {
-  //   prop: PropTypes,
-  // };
 
   selectFilter(event) {
     const activeFilter = event.target.dataset.key;
@@ -40,7 +36,7 @@ export default class Portfolio extends Component {
         <Toolbar
           filters={this.filters}
           selected={this.state.activeFilter}
-          onSelectFilter={this.selectFilter.bind(this)}
+          onSelectFilter={this.selectFilter}
         />
         <Projectlist projects={this.state.filteredProjects} />
       </div>

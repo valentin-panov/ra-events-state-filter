@@ -1,10 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Toolbar.css';
 import ToolbarItem from './ToolbarItem/ToolbarItem';
 
 function Toolbar(props) {
   const { filters, selected, onSelectFilter } = props;
+  if (!filters) {
+    return null;
+  }
   const filtersId = filters.map((filter) => ({ filter, id: Math.random() }));
   return (
     <div className={'form_radio_btn'}>
@@ -19,7 +21,5 @@ function Toolbar(props) {
     </div>
   );
 }
-
-Toolbar.propTypes = {};
 
 export default Toolbar;

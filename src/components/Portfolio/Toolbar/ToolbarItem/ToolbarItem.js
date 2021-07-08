@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ToolbarItem.css';
 
 function ToolbarItem(props) {
@@ -20,7 +19,5 @@ function ToolbarItem(props) {
     </>
   );
 }
-
-ToolbarItem.propTypes = {};
 
 export default ToolbarItem;

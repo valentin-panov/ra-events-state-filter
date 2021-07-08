@@ -1,10 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ProjectItem from './ProjectItem/ProjectItem';
 import './ProjectList.css';
 
 function Projectlist(props) {
   const { projects } = props;
+  if (!projects) {
+    return null;
+  }
   const projectsId = projects.map((project) => ({
     project,
     id: Math.random(),
@@ -56,7 +58,5 @@ function sliceIntoChunks(arr, c) {
   }
   return res;
 }
-
-Projectlist.propTypes = {};
 
 export default Projectlist;

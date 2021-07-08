@@ -1,7 +1,7 @@
 .projectListContainer {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .projectList {
@@ -11,6 +11,6 @@
   flex-grow: 0;
   flex-shrink: 0;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
